@@ -24,6 +24,8 @@
               </div>
               <div class="relative mt-6 flex-1 px-4 sm:px-6">
                 <%= image_tag("showcase/#{params[:skill].downcase}.png") %>
+                <p class="underline mb-2"><%= @skill["context"] %></p>
+                <p><%= @skill["description"] %></p>
               </div>
             </div>
           </div>
