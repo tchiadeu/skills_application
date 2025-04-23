@@ -4,11 +4,11 @@
     <div class="fixed inset-0 overflow-hidden">
       <div class="absolute inset-0 overflow-hidden">
         <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-          <div data-side-panel-target="panel" class="pointer-events-auto w-screen max-w-md transform transition ease-in-out duration-500 translate-x-full group-data-[complete=true]:translate-x-0">
+          <div data-side-panel-target="panel" class="pointer-events-auto w-[50vw] transform transition ease-in-out duration-500 translate-x-full group-data-[complete=true]:translate-x-0">
             <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
               <div class="px-4 sm:px-6">
                 <div class="flex items-start justify-between">
-                  <h2 class="text-base font-semibold text-gray-900" id="slide-over-title">
+                  <h2 class="text-lg font-semibold text-gray-900" id="slide-over-title">
                     <%= title(params[:skill]) %>
                   </h2>
                   <div class="ml-3 flex h-7 items-center">
@@ -23,7 +23,7 @@
                 </div>
               </div>
               <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                <!-- Your content -->
+                <%= image_tag("showcase/#{params[:skill].downcase}.png") %>
               </div>
             </div>
           </div>
