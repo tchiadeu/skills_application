@@ -1,65 +1,74 @@
 Activerecord_ORM:
-  description: "test"
+  context: "An app with conditional rendering of task"
+  description: "Here is one of all the tasks possible. It uses activerecord ORM to find existence of an object and render task associated conditionally"
   category: "Backend"
   library:
     name: "Active Record"
     language: "ruby"
 Activerecord_STI:
-  description: "test"
+  context: "An app with multiple payment possibility"
+  description: "To keep the DRY principle, there is a payments table in the database which have a type to manage single table inheritance. To have a better organisation, all inherited classes are classify in a module."
   category: "Backend"
   library:
     name: "Active Record"
     language: "ruby"
 Components:
-  description: "test"
+  context: "UI Kit for every web app"
+  description: "Using view components to manage all the ui_kit components. It uses also view components contrib from Evil Martians to use style variants (and other things)"
   category: "UI"
   library:
     name: "View Components"
     language: "ruby"
 Decorators:
-  description: "test"
+  context: "An app with reports for veterinarian"
+  description: "The decorator pattern is used to not mess the helpers folder. There is many things to present to the users and I prefer to use decorators for this things"
   category: "Pattern"
   library:
     name: "Drapper"
     language: "ruby"
 FormObject:
-  description: "test"
+  context: "An app with many forms to fill for the users"
+  description: "As there is many pages with form for the users, I decided to extend ActionView::Helpers::FormBuilder. This is more DRY and respect the global design system. For me, it doesn't have to be a ui component: form helpers are very strong and it is not clean to pass the form object as an argument of a component"
   category: "Backend"
   library:
-    name: "ActionView::FormBuilder::Helpers"
+    name: "ActionView::Helpers::FormBuilder"
     language: "ruby"
 Mobile:
-  description: "test"
+  context: "An app that can register audio from veterinarian consultation"
+  description: "After having some issues with the register of audio with the MediaRecorder API frow the browsers, we change by going on Hotwire Native. The phone microphone can manage possibilities themself (notifcation, economy mode, calls). As the views were already designed for web via erb, Hotwire Native was an obvious choice"
   category: "Native"
   library:
     name: "Hotwire Native"
     language: "javascript"
 Policies:
-  description: "test"
+  context: "An app where the user can't register multiple audio at the same time"
+  description: "There is many policies for this app, but this one is specific. It uses DRY monads (inside FailureType concern) to handle each cases and render differents flashes depending on it"
   category: "Pattern"
   library:
     name: "Pundit"
     language: "ruby"
 Testing:
-  description: "test"
+  context: "An app with multiple kind of users"
+  description: "I don't think I have to explain why writing tests. But here, you can also find the architecture with namespaces because there is multiple kind of users (owners, tenants, candidates...)"
   category: "TDD"
   library:
     name: "Rspec"
     language: "ruby"
 Turbo:
-  description: "test"
+  description: "It's just an override of the basic alert that we're having by going for { turbo_method: :verb, turbo_confirm: 'confirmation_text' }"
   category: "UX"
   library:
     name: "Turbo"
     language: "javascript"
 Turbo_Frames_Streams:
-  description: "test"
+  description: "Most of the time, I go for turbo_frames. But for the case that I need to change multiple part of the DOM, I go for turbo_streams"
   category: "UX"
   library:
     name: "Turbo"
     language: "ruby"
 Watcher:
-  description: "test"
+  context: "A part of the Guardfile"
+  description: "To have a better DX, I go for guard-rspec. I often change the config to match each project architecture"
   category: "TDD"
   library:
     name: "Guard"
