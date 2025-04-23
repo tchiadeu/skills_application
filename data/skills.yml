@@ -1,12 +1,66 @@
-decorators:
+Activerecord_ORM:
+  description: "test"
+  category: "Backend"
+  library:
+    name: "Active Record"
+    language: "ruby"
+Activerecord_STI:
+  description: "test"
+  category: "Backend"
+  library:
+    name: "Active Record"
+    language: "ruby"
+Components:
+  description: "test"
+  category: "UI"
+  library:
+    name: "View Components"
+    language: "ruby"
+Decorators:
   description: "test"
   category: "Pattern"
   library:
     name: "Drapper"
-    language: "Ruby"
-policies:
+    language: "ruby"
+FormObject:
+  description: "test"
+  category: "Backend"
+  library:
+    name: "ActionView::FormBuilder::Helpers"
+    language: "ruby"
+Mobile:
+  description: "test"
+  category: "Native"
+  library:
+    name: "Hotwire Native"
+    language: "javascript"
+Policies:
   description: "test"
   category: "Pattern"
   library:
     name: "Pundit"
-    language: "Ruby"
+    language: "ruby"
+Testing:
+  description: "test"
+  category: "TDD"
+  library:
+    name: "Rspec"
+    language: "ruby"
+Turbo:
+  description: "test"
+  category: "UX"
+  library:
+    name: "Turbo"
+    language: "javascript"
+Turbo_Frames_Streams:
+  description: "test"
+  category: "UX"
+  library:
+    name: "Turbo"
+    language: "ruby"
+Watcher:
+  description: "test"
+  category: "TDD"
+  library:
+    name: "Guard"
+    language: "ruby"
