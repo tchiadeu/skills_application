@@ -1,0 +1,12 @@
+decorators:
+  description: "test"
+  category: "Pattern"
+  library:
+    name: "Drapper"
+    language: "Ruby"
+policies:
+  description: "test"
+  category: "Pattern"
+  library:
+    name: "Pundit"
+    language: "Ruby"
