@@ -19,19 +19,19 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200 bg-white">
-            <% @skills.each do |skill| %>
+            <% @skills.each do |key, value| %>
               <tr class="group cursor-pointer">
-                <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 group-hover:bg-gray-50">
-                  <%= link_to title(skill.first), skills_path %>
+                <td class="text-sm font-medium whitespace-nowrap text-gray-900 group-hover:bg-gray-50">
+                  <%= link_to title(key), skills_path(skill: key), class: "py-4 pr-3 pl-4 sm:pl-6 w-full block" %>
                 </td>
-                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
-                  <%= link_to skills_path do %>
-                    <%= category_badge(skill.second["category"]) %>
+                <td class="text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
+                  <%= link_to skills_path(skill: key), class: "px-3 py-4 w-full block" do %>
+                    <%= category_badge(value["category"]) %>
                   <% end %>
                 </td>
-                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
-                  <%= link_to skills_path do %>
-                    <%= library_badge(skill.second["library"]) %>
+                <td class="text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
+                  <%= link_to skills_path(skill: key), class: "px-3 py-4 w-full block" do %>
+                    <%= library_badge(value["library"]) %>
                   <% end %>
                 </td>
               </tr>
