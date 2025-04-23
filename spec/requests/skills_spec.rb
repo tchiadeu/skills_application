@@ -7,4 +7,11 @@ RSpec.describe "Skills", type: :request do
       expect(response).to be_successful
     end
   end
+
+  describe "GET /show" do
+    it "returns a success response" do
+      get skills_path
+      expect(response).to be_successful
+    end
+  end
 end
