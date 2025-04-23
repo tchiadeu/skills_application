@@ -22,10 +22,14 @@
                   <%= link_to skill.second["description"], skills_path %>
                 </td>
                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
-                  <%= skill.second["category"] %>
+                  <%= link_to skills_path do %>
+                    <%= category_badge(skill.second["category"]) %>
+                  <% end %>
                 </td>
                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
-                  <%= skill.second["library"] %>
+                  <%= link_to skills_path do %>
+                    <%= library_badge(skill.second["library"]) %>
+                  <% end %>
                 </td>
               </tr>
             <% end %>
@@ -35,4 +39,3 @@
     </div>
   </div>
 </div>
-
