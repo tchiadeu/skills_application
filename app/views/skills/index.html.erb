@@ -1,4 +1,12 @@
-<div class="mt-8 flow-root w-full">
+<div class="flow-root w-full">
+  <div class="sm:flex sm:items-center mb-8">
+    <div class="sm:flex-auto">
+      <h1 class="text-2xl font-semibold text-gray-900">Skills</h1>
+      <p class="mt-2 text-sm text-gray-700">
+        The purpose of this list is to have a showcase of some of my skills. It doesn't have to be exhaustive.
+      </p>
+    </div>
+  </div>
   <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
       <div class="overflow-hidden shadow-sm ring-1 ring-black/5 sm:rounded-lg">
@@ -6,8 +14,6 @@
           <thead class="bg-gray-50">
             <tr>
               <th scope="col" class="py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
-              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Description</th>
-              <%# Front / Back / DB... %>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Category</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Library</th>
             </tr>
@@ -16,10 +22,7 @@
             <% @skills.each do |skill| %>
               <tr class="group cursor-pointer">
                 <td class="py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 group-hover:bg-gray-50">
-                  <%= link_to skill.first.capitalize, skills_path %>
-                </td>
-                <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
-                  <%= link_to skill.second["description"], skills_path %>
+                  <%= link_to title(skill.first), skills_path %>
                 </td>
                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 group-hover:bg-gray-50">
                   <%= link_to skills_path do %>
